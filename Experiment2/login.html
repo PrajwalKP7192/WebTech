@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+</head>
+<body>
+
+<header>
+<h1>Customer Login</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+</nav>
+
+<main>
+<form id="loginForm" novalidate>
+<fieldset>
+<legend>Login Form</legend>
+<p>
+<label for="loginEmail">Email</label><br>
+<input type="email" id="loginEmail" name="loginEmail">
+</p>
+<p>
+<label for="loginPassword">Password</label><br>
+<input type="password" id="loginPassword" name="loginPassword">
+</p>
+<p>
+<button type="submit">Login</button>
+</p>
+<p id="loginMessage"></p>
+</fieldset>
+</form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

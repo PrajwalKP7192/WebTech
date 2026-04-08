@@ -1,27 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProSport</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+    margin-top: 24px;
+}
+
+@media (max-width: 860px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 <body>
 
-<nav>
+<header class="site-header">
 <h1>ProSport</h1>
+<p>Exercise 4 - Styled E-Commerce Website</p>
+</header>
+
+<nav>
+<div class="nav-shell">
+<strong style="color: var(--accent-dark);">Sports Gear Store</strong>
 <ul>
+<li><a href="index.html">Home</a></li>
 <li><a href="football.html">Football</a></li>
 <li><a href="cricket.html">Cricket</a></li>
 <li><a href="basketball.html">Basketball</a></li>
 <li><a href="badminton.html">Badminton</a></li>
-<li><a href="cart.html">Cart 🛒</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="checkout.html">Checkout</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
 </ul>
+</div>
 </nav>
 
+<main>
 <section class="hero">
-<h2>Welcome to ProSport</h2>
-<p>Premium sports equipment for champions.</p>
-<a href="football.html" class="shop-btn">Shop Now</a>
+<span class="badge" style="background: rgba(255,255,255,0.18); color: #fff;">External + Internal + Inline CSS</span>
+<h2>Train Hard. Shop Smart.</h2>
+<p>
+Premium sports equipment for football, cricket, basketball, and badminton players.
+This page enhances Exercise 2 with a stronger visual style and cleaner layout.
+</p>
 </section>
 
+<section class="intro-grid">
+<div class="panel">
+<h2 class="section-title">Featured Categories</h2>
+<div class="category-grid">
+<article class="product-card">
+<div class="product-content">
+<span class="badge">Football</span>
+<h3>Match Day Essentials</h3>
+<p class="muted">Studs, shin guards, socks, and jerseys built for performance.</p>
+<a class="button" href="football.html">Explore</a>
+</div>
+</article>
+<article class="product-card">
+<div class="product-content">
+<span class="badge">Cricket</span>
+<h3>Training and Match Kits</h3>
+<p class="muted">Bats, balls, kits, and apparel for complete cricket preparation.</p>
+<a class="button" href="cricket.html">Explore</a>
+</div>
+</article>
+<article class="product-card">
+<div class="product-content">
+<span class="badge">Basketball</span>
+<h3>Court Ready Gear</h3>
+<p class="muted">Shoes, jerseys, and equipment made for speed and control.</p>
+<a class="button" href="basketball.html">Explore</a>
+</div>
+</article>
+<article class="product-card">
+<div class="product-content">
+<span class="badge">Badminton</span>
+<h3>Precision and Grip</h3>
+<p class="muted">Rackets, shuttlecocks, and shoes for indoor performance.</p>
+<a class="button" href="badminton.html">Explore</a>
+</div>
+</article>
+</div>
+</div>
+
+<aside class="panel">
+<h2 class="section-title">Why ProSport?</h2>
+<p class="muted">
+ProSport offers quality sports equipment, a clean shopping experience, and
+easy access to products across multiple categories.
+</p>
+</aside>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 ProSport Equipments</p>
+</footer>
 </body>
 </html>

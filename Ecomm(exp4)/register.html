@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.auth-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<h1>Register</h1>
+<p>Exercise 6 - Registration Form with Validation</p>
+</header>
+
+<nav>
+<div class="nav-shell">
+<strong>ProSport</strong>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+</div>
+</nav>
+
+<main class="auth-wrap">
+<section class="form-panel">
+<span class="badge" style="background: #ffe5d6;">Registration Form</span>
+<form id="registerForm" class="form-grid" novalidate style="margin-top: 18px;">
+<div class="form-group">
+<label for="fullName">Full Name</label>
+<input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="Enter your email">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number">
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password" name="password" placeholder="At least 6 characters">
+</div>
+<div class="form-group full">
+<label for="confirmPassword">Confirm Password</label>
+<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password">
+</div>
+<div class="form-group full">
+<button class="cart-btn" type="submit">Create Account</button>
+</div>
+</form>
+<p id="registerMessage" class="message"></p>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

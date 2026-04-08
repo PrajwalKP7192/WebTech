@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Scientific Calculator</h1>
+        <p>Added as a menu item in Exercise 1 using JavaScript.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="calculator.html">Scientific Calculator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <p>
+                Enter an expression and use scientific functions like <strong>sin</strong>,
+                <strong>cos</strong>, <strong>tan</strong>, <strong>log</strong>,
+                <strong>ln</strong>, <strong>sqrt</strong>, and <strong>power</strong>.
+            </p>
+
+            <p>
+                <label for="display">Display</label><br>
+                <input type="text" id="display" readonly size="40">
+            </p>
+
+            <table border="1" cellpadding="8">
+                <tr>
+                    <td><button type="button" onclick="appendValue('7')">7</button></td>
+                    <td><button type="button" onclick="appendValue('8')">8</button></td>
+                    <td><button type="button" onclick="appendValue('9')">9</button></td>
+                    <td><button type="button" onclick="appendValue('/')">/</button></td>
+                    <td><button type="button" onclick="appendValue('sin(')">sin</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="appendValue('4')">4</button></td>
+                    <td><button type="button" onclick="appendValue('5')">5</button></td>
+                    <td><button type="button" onclick="appendValue('6')">6</button></td>
+                    <td><button type="button" onclick="appendValue('*')">*</button></td>
+                    <td><button type="button" onclick="appendValue('cos(')">cos</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="appendValue('1')">1</button></td>
+                    <td><button type="button" onclick="appendValue('2')">2</button></td>
+                    <td><button type="button" onclick="appendValue('3')">3</button></td>
+                    <td><button type="button" onclick="appendValue('-')">-</button></td>
+                    <td><button type="button" onclick="appendValue('tan(')">tan</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="appendValue('0')">0</button></td>
+                    <td><button type="button" onclick="appendValue('.')">.</button></td>
+                    <td><button type="button" onclick="appendValue('(')">(</button></td>
+                    <td><button type="button" onclick="appendValue(')')">)</button></td>
+                    <td><button type="button" onclick="appendValue('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="appendValue('sqrt(')">sqrt</button></td>
+                    <td><button type="button" onclick="appendValue('log(')">log</button></td>
+                    <td><button type="button" onclick="appendValue('ln(')">ln</button></td>
+                    <td><button type="button" onclick="appendValue('^')">x^y</button></td>
+                    <td><button type="button" onclick="appendValue('pi')">pi</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="deleteLast()">DEL</button></td>
+                    <td><button type="button" onclick="clearDisplay()">C</button></td>
+                    <td colspan="3"><button type="button" onclick="calculate()">=</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

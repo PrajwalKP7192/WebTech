@@ -3,41 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple Calculator</title>
+  <title>Scientific Calculator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" class="display" id="display" disabled />
+  <main class="page">
+    <section class="intro">
+      <p class="tag">Experiment 5</p>
+      <h1>Scientific Calculator</h1>
+      <p class="subtitle">
+        This calculator supports arithmetic operations and scientific functions such as
+        sin, cos, tan, log, ln, sqrt, pi, and power.
+      </p>
+    </section>
 
-    <div class="buttons">
-      <button class="clear" onclick="clearDisplay()">C</button>
-      <button onclick="deleteLast()">DEL</button>
-      <button class="operator" onclick="appendValue('%')">%</button>
-      <button class="operator" onclick="appendValue('/')">/</button>
+    <section class="calculator">
+      <input type="text" class="display" id="display" readonly />
 
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button class="operator" onclick="appendValue('*')">*</button>
+      <div class="buttons">
+        <button type="button" onclick="appendValue('7')">7</button>
+        <button type="button" onclick="appendValue('8')">8</button>
+        <button type="button" onclick="appendValue('9')">9</button>
+        <button type="button" class="operator" onclick="appendValue('/')">/</button>
+        <button type="button" class="operator" onclick="appendValue('sin(')">sin</button>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button class="operator" onclick="appendValue('-')">-</button>
+        <button type="button" onclick="appendValue('4')">4</button>
+        <button type="button" onclick="appendValue('5')">5</button>
+        <button type="button" onclick="appendValue('6')">6</button>
+        <button type="button" class="operator" onclick="appendValue('*')">*</button>
+        <button type="button" class="operator" onclick="appendValue('cos(')">cos</button>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button class="operator" onclick="appendValue('+')">+</button>
+        <button type="button" onclick="appendValue('1')">1</button>
+        <button type="button" onclick="appendValue('2')">2</button>
+        <button type="button" onclick="appendValue('3')">3</button>
+        <button type="button" class="operator" onclick="appendValue('-')">-</button>
+        <button type="button" class="operator" onclick="appendValue('tan(')">tan</button>
 
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button class="equals" onclick="calculate()">=</button>
-    </div>
-  </div>
+        <button type="button" onclick="appendValue('0')">0</button>
+        <button type="button" onclick="appendValue('.')">.</button>
+        <button type="button" onclick="appendValue('(')">(</button>
+        <button type="button" onclick="appendValue(')')">)</button>
+        <button type="button" class="operator" onclick="appendValue('+')">+</button>
+
+        <button type="button" onclick="appendValue('sqrt(')">sqrt</button>
+        <button type="button" onclick="appendValue('log(')">log</button>
+        <button type="button" onclick="appendValue('ln(')">ln</button>
+        <button type="button" onclick="appendValue('^')">x^y</button>
+        <button type="button" onclick="appendValue('pi')">pi</button>
+
+        <button type="button" class="clear" onclick="clearDisplay()">C</button>
+        <button type="button" onclick="deleteLast()">DEL</button>
+        <button type="button" class="equals wide" onclick="calculate()">=</button>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-

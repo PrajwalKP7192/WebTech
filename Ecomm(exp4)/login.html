@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.auth-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<h1>Login</h1>
+<p>Exercise 6 - JavaScript Validation</p>
+</header>
+
+<nav>
+<div class="nav-shell">
+<strong>ProSport</strong>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+</div>
+</nav>
+
+<main class="auth-wrap">
+<section class="form-panel">
+<span class="badge" style="background: #ffe5d6;">Login Form</span>
+<form id="loginForm" class="form-grid" novalidate style="margin-top: 18px;">
+<div class="form-group full">
+<label for="loginEmail">Email</label>
+<input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email">
+</div>
+<div class="form-group full">
+<label for="loginPassword">Password</label>
+<input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
+</div>
+<div class="form-group full">
+<button class="cart-btn" type="submit">Login</button>
+</div>
+</form>
+<p id="loginMessage" class="message"></p>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

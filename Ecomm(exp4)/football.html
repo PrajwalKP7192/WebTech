@@ -1,52 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Football Equipments</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.collection-note {
+    margin-bottom: 18px;
+}
+</style>
 </head>
 <body>
 
+<header class="site-header">
+<h1>Football Collection</h1>
+<p>ProSport curated football equipment</p>
+</header>
+
 <nav>
-<h1>ProSport</h1>
+<div class="nav-shell">
+<strong>ProSport</strong>
 <ul>
 <li><a href="index.html">Home</a></li>
-<li><a href="cart.html">Cart 🛒</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="login.html">Login</a></li>
 </ul>
+</div>
 </nav>
 
-<h2 class="page-title">Football Equipments</h2>
+<main>
+<section class="panel collection-note">
+<span class="badge" style="background: #ffe5d6;">Top Picks for Weekend Matches</span>
+<p class="muted" style="margin-top: 12px;">Choose lightweight, match-ready football essentials designed for comfort and control.</p>
+</section>
 
-<div class="products">
-
-<div class="card">
-<img src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/1b9f186318804b37bc689379f2a7b096_9366/IE1805_HM1.jpg">
-<div class="product-name">Football Studs</div>
-<div class="price">₹4,999</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<section class="products">
+<article class="product-card">
+<img src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/1b9f186318804b37bc689379f2a7b096_9366/IE1805_HM1.jpg" alt="Football studs">
+<div class="product-content">
+<h3>Football Studs</h3>
+<p class="muted">Comfortable grip and strong traction for match play.</p>
+<p class="price">Rs. 4,999</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<div class="card">
-<img src="https://imagesprod3.dickssportinggoods.com/is/image/dkscdn/16NIKYYTHPRTGGFLXSCSD_Blue_White_is/?$DSG_ProductCard$">
-<div class="product-name">Shin Guards</div>
-<div class="price">₹899</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://imagesprod3.dickssportinggoods.com/is/image/dkscdn/16NIKYYTHPRTGGFLXSCSD_Blue_White_is/?$DSG_ProductCard$" alt="Shin guards">
+<div class="product-content">
+<h3>Shin Guards</h3>
+<p class="muted">Reliable impact protection for training and competitive games.</p>
+<p class="price">Rs. 899</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<div class="card">
-<img src="https://www.blank-jerseys.com/wp-content/uploads/2019/11/Youth-Adult-Black-Football-Jersey-600x600.jpg">
-<div class="product-name">Football Jersey</div>
-<div class="price">₹2,299</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://www.blank-jerseys.com/wp-content/uploads/2019/11/Youth-Adult-Black-Football-Jersey-600x600.jpg" alt="Football jersey">
+<div class="product-content">
+<h3>Football Jersey</h3>
+<p class="muted">Breathable fabric built for comfort during long sessions.</p>
+<p class="price">Rs. 2,299</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<div class="card">
-<img src="https://images.prodirectsport.com/ProductImages/Main/173119.jpg">
-<div class="product-name">Football Socks</div>
-<div class="price">₹499</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://images.prodirectsport.com/ProductImages/Main/173119.jpg" alt="Football socks">
+<div class="product-content">
+<h3>Football Socks</h3>
+<p class="muted">Cushioned support for training drills and matches.</p>
+<p class="price">Rs. 499</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
-
-</div>
+</article>
+</section>
+</main>
 
 </body>
 </html>

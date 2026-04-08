@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .projects-container {
-            max-width: 900px;
-            margin: 40px auto;
-        }
-
-        .project-box {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .project-box h3 {
-            margin-top: 0;
-        }
-
-        .project-box p {
-            line-height: 1.6;
+        .projects-layout {
+            display: grid;
+            gap: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <p class="eyebrow">Exercise 3</p>
+        <h1 class="brand-title">Projects</h1>
+        <span class="page-tag">Selected Work</span>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="education.html">Education</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
 
-<div class="projects-container">
-    <h1 style="text-align:center;">Projects</h1>
+    <main class="projects-layout">
+        <section class="glass-card">
+            <h2 style="margin-top: 0;">Sports News and Analytics Website</h2>
+            <p class="lead">
+                A project focused on presenting sports updates, match summaries,
+                and clean information layout for readers.
+            </p>
+            <div class="project-links">
+                <a href="../Experiment2/index.html">Related e-commerce lab</a>
+                <a href="../Experiment7/index.html">Event handling demo</a>
+            </div>
+        </section>
 
-    <div class="project-box">
-        <h3>Sports News & Analytics Website</h3>
-        <p>
-            This project is a dynamic sports website that provides updates,
-            match information, and basic analytics related to various sports.
-            It focuses on clean UI design and structured content presentation.
-            The project demonstrates my understanding of HTML, CSS, and website
-            structuring.
-        </p>
-    </div>
+        <section class="glass-card">
+            <h2 style="margin-top: 0;">K2 Mountain Information Website</h2>
+            <p class="lead">
+                An informational site that organizes historical and geographical
+                content into readable sections and structured pages.
+            </p>
+        </section>
 
-    <div class="project-box">
-        <h3>K2 Mountain Information Website</h3>
-        <p>
-            This website provides detailed information about K2 mountain,
-            including its history, climbing statistics, and geographical facts.
-            The project showcases my ability to create structured web pages,
-            organize large amounts of information, and design visually appealing layouts.
-        </p>
-    </div>
+        <section class="glass-card">
+            <h2 style="margin-top: 0;">Scientific Calculator</h2>
+            <p class="lead">
+                A JavaScript-powered calculator added as a new menu item to extend
+                the personal website with an interactive feature.
+            </p>
+            <a class="primary-button" href="calculator.html">Open Calculator</a>
+        </section>
+    </main>
 
-</div>
-
+    <footer>
+        <p>Projects page uses external layout styling plus page-level internal CSS.</p>
+    </footer>
 </body>
 </html>

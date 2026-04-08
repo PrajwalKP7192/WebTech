@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .calculator-copy {
+            max-width: 680px;
+            margin: 0 auto 22px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p class="eyebrow">Exercise 5</p>
+        <h1 class="brand-title">Scientific Calculator</h1>
+        <span class="page-tag">JavaScript Menu Addition</span>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="calculator-copy">
+            <p class="lead">
+                This calculator supports arithmetic operations and scientific functions
+                such as <span style="color: var(--accent-strong);">sin, cos, tan, log, ln, sqrt, pi, and power</span>.
+            </p>
+        </section>
+
+        <section class="calculator-shell">
+            <input type="text" id="display" class="calc-display" readonly>
+            <div class="calc-grid">
+                <button type="button" onclick="appendValue('7')">7</button>
+                <button type="button" onclick="appendValue('8')">8</button>
+                <button type="button" onclick="appendValue('9')">9</button>
+                <button type="button" class="accent" onclick="appendValue('/')">/</button>
+                <button type="button" class="accent" onclick="appendValue('sin(')">sin</button>
+
+                <button type="button" onclick="appendValue('4')">4</button>
+                <button type="button" onclick="appendValue('5')">5</button>
+                <button type="button" onclick="appendValue('6')">6</button>
+                <button type="button" class="accent" onclick="appendValue('*')">*</button>
+                <button type="button" class="accent" onclick="appendValue('cos(')">cos</button>
+
+                <button type="button" onclick="appendValue('1')">1</button>
+                <button type="button" onclick="appendValue('2')">2</button>
+                <button type="button" onclick="appendValue('3')">3</button>
+                <button type="button" class="accent" onclick="appendValue('-')">-</button>
+                <button type="button" class="accent" onclick="appendValue('tan(')">tan</button>
+
+                <button type="button" onclick="appendValue('0')">0</button>
+                <button type="button" onclick="appendValue('.')">.</button>
+                <button type="button" onclick="appendValue('(')">(</button>
+                <button type="button" onclick="appendValue(')')">)</button>
+                <button type="button" class="accent" onclick="appendValue('+')">+</button>
+
+                <button type="button" onclick="appendValue('sqrt(')">sqrt</button>
+                <button type="button" onclick="appendValue('log(')">log</button>
+                <button type="button" onclick="appendValue('ln(')">ln</button>
+                <button type="button" onclick="appendValue('^')">x^y</button>
+                <button type="button" onclick="appendValue('pi')">pi</button>
+
+                <button type="button" onclick="deleteLast()">DEL</button>
+                <button type="button" onclick="clearDisplay()">C</button>
+                <button type="button" class="wide primary-button" onclick="calculate()">=</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Calculator implemented with JavaScript and added to the personal site menu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

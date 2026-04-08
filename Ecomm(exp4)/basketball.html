@@ -1,46 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Basketball Equipments</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.collection-note {
+    margin-bottom: 18px;
+}
+</style>
 </head>
 <body>
 
+<header class="site-header">
+<h1>Basketball Collection</h1>
+<p>Gear built for speed, grip, and control</p>
+</header>
+
 <nav>
-<h1>ProSport</h1>
+<div class="nav-shell">
+<strong>ProSport</strong>
 <ul>
 <li><a href="index.html">Home</a></li>
-<li><a href="cart.html">Cart 🛒</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="login.html">Login</a></li>
 </ul>
+</div>
 </nav>
 
-<h2 class="page-title">Basketball Equipments</h2>
+<main>
+<section class="panel collection-note">
+<span class="badge" style="background: #ffe5d6;">Court Essentials</span>
+<p class="muted" style="margin-top: 12px;">A compact basketball collection with a clean card-based design.</p>
+</section>
 
-<div class="products">
-
-<div class="card">
-<img src="https://as1.ftcdn.net/v2/jpg/05/26/61/84/1000_F_526618406_Glrp035vUBoxOU3apFEos5M1ejxrH2X7.jpg">
-<div class="product-name">Basketball</div>
-<div class="price">₹1,499</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<section class="products">
+<article class="product-card">
+<img src="https://as1.ftcdn.net/v2/jpg/05/26/61/84/1000_F_526618406_Glrp035vUBoxOU3apFEos5M1ejxrH2X7.jpg" alt="Basketball">
+<div class="product-content">
+<h3>Basketball</h3>
+<p class="muted">High grip surface for indoor and outdoor court use.</p>
+<p class="price">Rs. 1,499</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<div class="card">
-<img src="https://images-na.ssl-images-amazon.com/images/I/81-gUoTO+IL._AC_UL1500_.jpg">
-<div class="product-name">Basketball Shoes</div>
-<div class="price">₹5,999</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://images-na.ssl-images-amazon.com/images/I/81-gUoTO+IL._AC_UL1500_.jpg" alt="Basketball shoes">
+<div class="product-content">
+<h3>Basketball Shoes</h3>
+<p class="muted">Ankle support and cushioning for quick direction changes.</p>
+<p class="price">Rs. 5,999</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<div class="card">
-<img src="https://th.bing.com/th/id/OIP.9I8V8TRY-8dgOhn7OGEVIwHaHa">
-<div class="product-name">Basketball Jersey</div>
-<div class="price">₹2,499</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://th.bing.com/th/id/OIP.9I8V8TRY-8dgOhn7OGEVIwHaHa" alt="Basketball jersey">
+<div class="product-content">
+<h3>Basketball Jersey</h3>
+<p class="muted">Breathable fit for practice and competitive play.</p>
+<p class="price">Rs. 2,499</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
-
-</div>
-
+</article>
+</section>
+</main>
 
 </body>
 </html>

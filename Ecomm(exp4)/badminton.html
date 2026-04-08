@@ -1,48 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Badminton Equipments</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.collection-note {
+    margin-bottom: 18px;
+}
+</style>
 </head>
 <body>
 
+<header class="site-header">
+<h1>Badminton Collection</h1>
+<p>Fast, lightweight, and precise training gear</p>
+</header>
+
 <nav>
-<h1>ProSport</h1>
+<div class="nav-shell">
+<strong>ProSport</strong>
 <ul>
 <li><a href="index.html">Home</a></li>
-<li><a href="cart.html">Cart 🛒</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="login.html">Login</a></li>
 </ul>
+</div>
 </nav>
 
-<h2 class="page-title">Badminton Equipments</h2>
+<main>
+<section class="panel collection-note">
+<span class="badge" style="background: #ffe5d6;">Indoor Performance Picks</span>
+<p class="muted" style="margin-top: 12px;">A refined Exercise 4 product gallery for badminton essentials.</p>
+</section>
 
-<div class="products">
-
-<!-- Badminton Racket -->
-<div class="card">
-<img src="https://centralsports.co.uk/cdn/shop/collections/CS-Collections-1-Rackets.jpg?v=1644402727" alt="Badminton Racket">
-<div class="product-name">Premium Badminton Racket</div>
-<div class="price">₹2,999</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<section class="products">
+<article class="product-card">
+<img src="https://centralsports.co.uk/cdn/shop/collections/CS-Collections-1-Rackets.jpg?v=1644402727" alt="Badminton racket">
+<div class="product-content">
+<h3>Premium Badminton Racket</h3>
+<p class="muted">Balanced racket frame for better control and sharp strokes.</p>
+<p class="price">Rs. 2,999</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<!-- Shuttlecocks -->
-<div class="card">
+<article class="product-card">
 <img src="https://eagle.co.id/wp-content/uploads/2022/11/Shuttlecock-Lite-3.jpg" alt="Shuttlecocks">
-<div class="product-name">Tournament Shuttlecocks</div>
-<div class="price">₹599</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<div class="product-content">
+<h3>Tournament Shuttlecocks</h3>
+<p class="muted">Steady flight and dependable quality for regular practice.</p>
+<p class="price">Rs. 599</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
+</article>
 
-<!-- Badminton Shoes -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Badminton Shoes">
-<div class="product-name">High Grip Badminton Shoes</div>
-<div class="price">₹3,999</div>
-<a href="cart.html"><button class="cart-btn">Add to Cart</button></a>
+<article class="product-card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Badminton shoes">
+<div class="product-content">
+<h3>High Grip Badminton Shoes</h3>
+<p class="muted">Comfortable sole with strong court grip and support.</p>
+<p class="price">Rs. 3,999</p>
+<a class="cart-btn" href="cart.html">Add to Cart</a>
 </div>
-
-</div>
+</article>
+</section>
+</main>
 
 </body>
 </html>
