@@ -1,0 +1,15 @@
+{
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
+    "python.terminal.activateEnvironment": true,
+    "files.associations": {
+        "*.sql": "sql"
+    },
+    "editor.formatOnSave": true,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "emmet.includeLanguages": {
+        "php": "html"
+    }
+}

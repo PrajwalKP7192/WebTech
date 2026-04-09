@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS webtech_lab;
+USE webtech_lab;
+
+CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(120) NOT NULL,
+    category VARCHAR(80) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

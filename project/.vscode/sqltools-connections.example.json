@@ -1,0 +1,15 @@
+[
+    {
+        "name": "TripTally Local MySQL",
+        "driver": "MySQL",
+        "previewLimit": 50,
+        "server": "127.0.0.1",
+        "port": 3306,
+        "database": "triptally",
+        "username": "triptally_app",
+        "password": "Z6px2NdQNV3CGGsm7UgXQ0sO",
+        "mysqlOptions": {
+            "authProtocol": "default"
+        }
+    }
+]

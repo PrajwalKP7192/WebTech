@@ -1,0 +1,77 @@
+CREATE DATABASE IF NOT EXISTS triptally CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE triptally;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(120) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    home_airport VARCHAR(80) DEFAULT NULL,
+    preferred_currency VARCHAR(10) NOT NULL DEFAULT 'USD',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS trips (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    title VARCHAR(120) NOT NULL,
+    destination VARCHAR(120) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    travelers INT NOT NULL DEFAULT 1,
+    status VARCHAR(40) NOT NULL DEFAULT 'Planning',
+    notes TEXT DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_trips_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS itinerary_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    trip_id INT NOT NULL,
+    day_number INT NOT NULL,
+    title VARCHAR(120) NOT NULL,
+    activity_time TIME DEFAULT NULL,
+    location VARCHAR(120) DEFAULT NULL,
+    cost_estimate DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    notes TEXT DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_itinerary_trip FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS budget_entries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    trip_id INT NOT NULL,
+    category VARCHAR(60) NOT NULL,
+    label VARCHAR(120) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    entry_type VARCHAR(20) NOT NULL DEFAULT 'estimate',
+    spent_on DATE DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_budget_trip FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS packing_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    trip_id INT NOT NULL,
+    item_name VARCHAR(120) NOT NULL,
+    category VARCHAR(60) NOT NULL,
+    quantity INT NOT NULL DEFAULT 1,
+    is_packed TINYINT(1) NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_packing_trip FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    subject VARCHAR(150) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS app_sessions (
+    session_id VARCHAR(128) PRIMARY KEY,
+    session_data MEDIUMBLOB NOT NULL,
+    last_activity INT UNSIGNED NOT NULL
+);
